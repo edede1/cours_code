@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Landing Page GStreamer RTSP</title>
+  <style>
+    /* Ajoutez votre CSS personnalisé ici */
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GStreamer RTSP Landing Page</h1>
+  </header>
+
+  <section>
+    <h2>Stream RTSP Video</h2>
+    <form id="rtspForm">
+      <label for="rtspUrl">RTSP URL:</label>
+      <input type="text" id="rtspUrl" placeholder="Enter RTSP URL" required>
+      <button type="submit">Play</button>
+    </form>
+    <div id="videoContainer"></div>
+  </section>
+
+  <footer>
+    <p>© 2023 Your Company. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Ajoutez votre code JavaScript ici pour interagir avec GStreamer
+
+    document.getElementById("rtspForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Empêche la soumission du formulaire par défaut
+      var rtspUrl = document.getElementById("rtspUrl").value;
+
+      // Ajoutez votre code pour interagir avec GStreamer et afficher la vidéo ici
+
+      // Exemple de code pour l'affichage de la vidéo en utilisant une balise vidéo HTML5
+      var videoContainer = document.getElementById("videoContainer");
+      videoContainer.innerHTML = `<video src="${rtspUrl}" controls autoplay></video>`;
+    });
+  </script>
+</body>
+</html>
